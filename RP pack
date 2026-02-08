@@ -1,0 +1,47 @@
+{
+  "resource_pack_name": "Palladium Tech Ascension",
+  "texture_name": "atlas.items",
+  "texture_data": {
+    "palladium_core": {
+      "textures": "textures/items/palladium_core"
+    }
+  }
+}{
+  "format_version": 2,
+  "header": {
+    "name": "Palladium Tech Ascension RP",
+    "description": "Tech superhero addon – textures",
+    "uuid": "33333333-3333-3333-3333-333333333333",
+    "version": [1, 0, 0],
+    "min_engine_version": [1, 21, 0]
+  },
+  "modules": [
+    {
+      "type": "resources",
+      "uuid": "44444444-4444-4444-4444-444444444444",
+      "version": [1, 0, 0]
+    }
+  ]
+}{
+  "format_version": "1.20.50",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "palladium:palladium_core"
+    },
+    "tags": ["crafting_table"],
+    "pattern": [
+      "IRI",
+      "RDR",
+      "IRI"
+    ],
+    "key": {
+      "I": { "item": "minecraft:iron_ingot" },
+      "R": { "item": "minecraft:redstone" },
+      "D": { "item": "minecraft:diamond" }
+    },
+    "result": {
+      "item": "palladium:palladium_core",
+      "count": 1
+    }
+  }
+}
