@@ -1,0 +1,60 @@
+Palladium_Tech_Ascension/
+├── behavior_pack/
+│   ├── manifest.json
+│   ├── items/
+│   │   └── palladium_core.json
+│   └── recipes/
+│       └── palladium_core.json
+└── resource_pack/
+    ├── manifest.json
+    └── textures/
+        ├── item_texture.json
+        └── items/
+            └── palladium_core.png{
+  "format_version": 2,
+  "header": {
+    "name": "Palladium Tech Ascension BP",
+    "description": "Tech superhero addon – working core",
+    "uuid": "11111111-1111-1111-1111-111111111111",
+    "version": [1, 0, 0],
+    "min_engine_version": [1, 21, 0]
+  },
+  "modules": [
+    {
+      "type": "data",
+      "uuid": "22222222-2222-2222-2222-222222222222",
+      "version": [1, 0, 0]
+    }
+  ]
+}{
+  "format_version": "1.20.50",
+  "minecraft:item": {
+    "description": {
+      "identifier": "palladium:palladium_core",
+      "category": "items"
+    },
+    "components": {
+      "minecraft:icon": "palladium_core",
+      "minecraft:max_stack_size": 16,
+      "minecraft:use_duration": 20,
+      "minecraft:display_name": {
+        "value": "Palladium Core"
+      },
+      "minecraft:on_use": {
+        "event": "activate"
+      }
+    },
+    "events": {
+      "activate": {
+        "run_command": {
+          "command": [
+            "effect @s strength 5 1 true",
+            "effect @s speed 5 1 true",
+            "clear @s palladium:palladium_core 1",
+            "tellraw @s {\"rawtext\":[{\"text\":\"§bPalladium energy surges through you!\"}]}"
+          ]
+        }
+      }
+    }
+  }
+}
